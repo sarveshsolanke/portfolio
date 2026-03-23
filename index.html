@@ -359,19 +359,44 @@
 
     /* SKILLS */
     #skills { background: var(--bg); }
-    .skills-wrapper {
-      display: flex; flex-direction: column; align-items: center;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
     }
-    .skills-pills {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 12px; max-width: 800px;
-    }
-    .skill-pill {
-      padding: 8px 20px;
+    .skill-category {
       background: var(--surface);
       border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 26px;
+      transition: border-color 0.3s;
+    }
+    .skill-category:hover { border-color: rgba(124,58,237,0.35); }
+    .skill-cat-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .skill-cat-icon {
+      width: 34px; height: 34px;
+      background: rgba(124,58,237,0.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .skill-cat-title {
+      font-size: 13px; font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.3px;
+    }
+    .skill-pills {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .skill-pill {
+      padding: 5px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
       border-radius: 50px;
-      font-size: 14px; font-weight: 500;
+      font-size: 12px; font-weight: 500;
       color: var(--muted);
       transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
@@ -624,7 +649,7 @@
         <div class="exp-content">
           <div class="exp-header">
             <div class="exp-company">
-              <a href="https://www.expsar.com/" target="_blank" style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Expsar LLP <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
+              <a href="YOUR_EXPSAR_URL" target="_blank" style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">Expsar LLP <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
             </div>
             <div class="exp-badge">
               <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
@@ -681,7 +706,7 @@
           <div class="project-tags">
             <span class="tag">AI</span><span class="tag">Drone Tech</span><span class="tag">Indoor Mapping</span><span class="tag">Startup</span>
           </div>
-          <a href="https://www.expsar.com/" target="_blank" onclick="event.stopPropagation()" class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
+          <a href="YOUR_EXPSAR_URL" target="_blank" onclick="event.stopPropagation()" class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
             Expsar LLP ↗
           </a>
@@ -702,7 +727,7 @@
           <div class="project-tags">
             <span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">Embedded Programming</span>
           </div>
-          <a href="https://www.youtube.com/watch?v=_gwgB6Yc8v4" target="_blank" onclick="event.stopPropagation()" class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
+          <a href="YOUR_YOUTUBE_URL" target="_blank" onclick="event.stopPropagation()" class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 1.86-.14 3.23-.44 4.17-.27.82-.9 1.45-1.72 1.72-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 18c-3.19 0-5.22-.14-6.17-.44-.82-.27-1.45-.9-1.72-1.72-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L4 12c0-1.86.14-3.23.44-4.17.27-.82.9-1.45 1.72-1.72.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 6c3.19 0 5.22.14 6.17.44.82.27 1.45.9 1.72 1.72z"/></svg>
             DronoMines 2 ↗
           </a>
@@ -754,31 +779,80 @@
   <div class="section-inner">
     <div class="section-title-block" style="text-align:center;">
       <h2 class="section-title" style="text-align:center;">Technical Skills</h2>
-      <div class="title-line" style="margin:10px auto;"></div>
+      <div class="title-line" style="margin:10px auto 40px;"></div>
     </div>
-    <div class="skills-wrapper">
-      <div class="skills-pills">
-        <span class="skill-pill">JavaScript / TypeScript</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">Java</span>
-        <span class="skill-pill">C++</span>
-        <span class="skill-pill">Flutter</span>
-        <span class="skill-pill">React.js</span>
-        <span class="skill-pill">Node.js</span>
-        <span class="skill-pill">HTML / CSS</span>
-        <span class="skill-pill">SQL</span>
-        <span class="skill-pill">Git</span>
-        <span class="skill-pill">Arduino</span>
-        <span class="skill-pill">Raspberry Pi</span>
-        <span class="skill-pill">PX4 Autopilot</span>
-        <span class="skill-pill">Microsoft Azure</span>
-        <span class="skill-pill">Android Dev</span>
-        <span class="skill-pill">Machine Learning</span>
-        <span class="skill-pill">Unity Engine</span>
-        <span class="skill-pill">Robotics &amp; Automation</span>
-        <span class="skill-pill">Embedded Systems</span>
-        <span class="skill-pill">Data Analysis</span>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">💻</div>
+          <div class="skill-cat-title">Programming Languages</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">PowerShell</span>
+        </div>
       </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🎮</div>
+          <div class="skill-cat-title">Frameworks / Engines / Creative Tools</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Unity</span>
+          <span class="skill-pill">Unreal Engine</span>
+          <span class="skill-pill">Flutter</span>
+          <span class="skill-pill">Autodesk Maya</span>
+          <span class="skill-pill">Dunia Engine</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🛠️</div>
+          <div class="skill-cat-title">Developer Tools / Platforms</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">Linux</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Firebase</span>
+          <span class="skill-pill">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">📦</div>
+          <div class="skill-cat-title">Build / Deployment / Packaging Tools</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Maven</span>
+          <span class="skill-pill">CMake</span>
+          <span class="skill-pill">AutoIt</span>
+          <span class="skill-pill">InstallShield</span>
+          <span class="skill-pill">PSADT</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🤝</div>
+          <div class="skill-cat-title">Professional Skills</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">Problem Solving</span>
+          <span class="skill-pill">Teamwork</span>
+          <span class="skill-pill">Communication</span>
+          <span class="skill-pill">Adaptability</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -856,7 +930,7 @@
       role: 'Co-founder & Technical Lead (Early-stage Startup · No Longer Active)',
       desc: 'Contributed to an early-stage startup focused on indoor navigation and drone-mapping technology. Worked on client coordination, system execution, and managing end-to-end delivery processes. A strong learning experience in product development, technical leadership, and stakeholder communication.',
       tags: ['AI', 'Drone Tech', 'Indoor Mapping', 'Python', 'Flutter', 'Startup'],
-      link: 'https://www.expsar.com/',
+      link: 'YOUR_EXPSAR_URL',
       linkLabel: 'Expsar LLP'
     },
     dronomines: {
@@ -864,7 +938,7 @@
       role: 'Lead Developer',
       desc: 'Developed an advanced drone-based video surveillance solution focusing on landslide prediction and automation. Designed and built an image processing pipeline for real-time hazard detection.',
       tags: ['Arduino', 'Raspberry Pi', 'Embedded Programming', 'Python / C++ / C#', 'Unity Engine', 'Robotics & Automation'],
-      link: 'https://www.youtube.com/watch?v=_gwgB6Yc8v4',
+      link: 'YOUR_YOUTUBE_URL',
       linkLabel: 'DronoMines 2'
     },
     inmaps: {
