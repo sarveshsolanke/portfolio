@@ -1,6 +1,6 @@
 # Sarvesh Solanke — Portfolio
 
-Live site: [sarvesh.dev](https://sarvesh.dev)
+Live site: [sarvesh.dev]( https://sarveshsolanke.github.io/portfolio/)
 
 Personal portfolio built to showcase my software engineering and AI projects, professional experience, and technical background. Single-page site built with vanilla HTML, CSS, and JavaScript, hosted on GitHub Pages.
 
