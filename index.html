@@ -1604,11 +1604,39 @@
           </div>
         </div>
 
+        <div class="project-card" onclick="openModal('lancerstore')">
+          <div class="project-img">
+            <img src="assets/lancerstore/1.png" alt="Windsor Lancer Store e-commerce platform"
+              onerror="this.style.background='#1a1a26';this.src=''" />
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <div class="project-title">Windsor Lancer Store</div>
+              <div class="project-arrow">↗</div>
+            </div>
+            <div class="project-role">Full Stack Developer : University Course Project</div>
+            <div class="project-desc">Full-stack e-commerce platform for University of Windsor students to buy official Lancer merchandise. Features Firebase real-time database, multi-role authentication, admin dashboard with live analytics, and automated Excel reporting.</div>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Google OAuth</span>
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;">
+              <a href="https://pranitashindee.github.io/Windsor_Lancer_Store_MVP/" target="_blank" onclick="event.stopPropagation()"
+                class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                Live Site ↗
+              </a>
+              <a href="https://github.com/sarveshsolanke/Windsor_Lancer_Store_MVP.git" target="_blank" onclick="event.stopPropagation()"
+                class="project-read" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
-
-  <!-- SKILLS -->
   <section id="skills">
     <div class="section-inner">
       <div class="section-title-block" style="text-align:center;">
@@ -1827,6 +1855,16 @@
         tags: ['Python', 'FastAPI', 'LangChain', 'ChromaDB', 'Groq LLM', 'Docker', 'REST API', 'RAG'],
         link: 'https://github.com/sarveshsolanke/ai-code-reviewer',
         linkLabel: 'View on GitHub'
+      },
+      lancerstore: {
+        title: 'Windsor Lancer Store',
+        role: 'Full Stack Developer : University Course Project (Team of 4)',
+        desc: 'Built a full-stack e-commerce platform for University of Windsor students to purchase official Lancer merchandise. Features Firebase Firestore real-time NoSQL database, Firebase Auth with email/password and Google OAuth, role-based access control (admin vs customer), and a complete Admin Dashboard with live KPI analytics, product management, order tracking, and automated Excel report exports using SheetJS. Customer-facing features include product filtering, cart, checkout with HST, order history, saved addresses, and wishlist. Deployed on GitHub Pages with no backend server  fully serverless architecture.',
+        tags: ['JavaScript', 'HTML5', 'CSS3', 'Firebase Firestore', 'Firebase Auth', 'Google OAuth', 'SheetJS', 'NoSQL', 'GitHub Pages', 'Responsive Design'],
+        link: 'https://pranitashindee.github.io/Windsor_Lancer_Store_MVP/',
+        linkLabel: 'Live Site',
+        githubLink: 'https://github.com/sarveshsolanke/Windsor_Lancer_Store_MVP.git',
+        images: ['assets/lancerstore/1.png', 'assets/lancerstore/2.png']
       }
     };
 
